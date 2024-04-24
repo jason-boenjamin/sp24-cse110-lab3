@@ -1,7 +1,24 @@
+/* This file styles the ShellDivers meeting minutes page */
+:root{
+    --main-bg-color: #eaeaea;
+    --text-color: #333;
+    --accent-color: hsl(210, 50%,60%);
+}
 
-
+/*Sets the greyish color for the header, as well as centers and pads it*/
 header {
-    background-color: #f4f4f4;
+    background-color:rgb(193, 122, 31);
     padding: 20px;
     text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
+
+body{
+    background-color: var(--main-bg-color, white); /* Default is white */;
+    color: var(--text-color);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
