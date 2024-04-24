@@ -19,9 +19,17 @@
             <hr>
         </header>
 
-        <nav>
-            <h4>Table of Contents</h4>
+        <!-- Hidden checkbox -->
+        <input type="checkbox" id="toggle-checkbox" style="display: none;">
+
+        <!-- Label for the checkbox, acts as the toggle button -->
+        <label for="toggle-checkbox" id="toggle-nav">Toggle Table of Contents</label>
+
+        <nav id="table-of-contents">
+            
             <ul>
+                <br>
+                <h5>Table of Contents</h5>
                 <li><a href="#attendance">Attendance</a></li>
                 <li><a href="#agenda">Agenda</a></li>
                 <li><a href="#unfinished">Unfinished Business</a></li>
