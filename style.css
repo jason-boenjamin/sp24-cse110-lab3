@@ -1,9 +1,4 @@
 /* This file styles the ShellDivers meeting minutes page */
-:root{
-    --main-bg-color: #eaeaea;
-    --text-color: #333;
-    --accent-color: hsl(210, 50%,60%);
-}
 
 /*Sets the greyish color for the header, as well as centers and pads it*/
 header {
@@ -16,6 +11,15 @@ header {
     margin-right: 0.5rem;
 }
 
+:root{
+    --main-bg-color: #eaeaea;
+    --text-color: #333;
+    --accent-color: hsl(210, 50%,60%);
+    --fallback-color: #000;
+}
+
+
+
 body{
     background-color: var(--main-bg-color, white); /* Default is white */;
     color: var(--text-color);
@@ -23,26 +27,23 @@ body{
     margin-left: 220px;
 }
 
-
-
-
 #toggle-nav {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
-    background: #ccc;
+    background-color: var(--accent-color);
     padding: 10px;
     cursor: pointer;
 }
 
-/* Style for the nav, hidden off-screen initially */
+/* Style for the nav hidden off-screen initially */
 #table-of-contents {
     position: fixed;
     top: 0;
     left: -220px;
     width: 200px;
-    height: 100%;
+    height: 100vh;
     overflow-y: auto;
     background: white;
     transition: left 0.3s;
@@ -62,4 +63,9 @@ body{
     transition: margin-left 0.3s;
 }
 
+/* Hover over links with an orange underline */
+a:hover, a:active {
+    color: hsla(34,100%,50%, 0.8);
+    text-decoration: underline;
+}
 
