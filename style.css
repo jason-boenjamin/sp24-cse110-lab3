@@ -3,12 +3,17 @@
 /*Sets the greyish color for the header, as well as centers and pads it*/
 header {
     background-color:rgb(193, 122, 31);
+    border-style: dashed;
+    border-color: var(--accent-color);
+    border-width: 1vw;
+    border-radius: 5%;
     padding: 20px;
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-bottom: 5px solid var(--accent-color);
 }
 
 :root{
@@ -16,14 +21,15 @@ header {
     --text-color: #333;
     --accent-color: hsl(210, 50%,60%);
     --fallback-color: #000;
+    --header-bg-color: rgb(193,122,31);
+    --link-hover-color: hsla(34, 100%, 50%, 0.8); 
+    --font-stack: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
-
 
 body{
     background-color: var(--main-bg-color, white); /* Default is white */;
     color: var(--text-color);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-stack);
     margin-left: 220px;
 }
 
@@ -69,3 +75,10 @@ a:hover, a:active {
     text-decoration: underline;
 }
 
+/* Box layout for main content */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
