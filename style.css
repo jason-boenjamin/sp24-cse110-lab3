@@ -20,5 +20,46 @@ body{
     background-color: var(--main-bg-color, white); /* Default is white */;
     color: var(--text-color);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 220px;
 }
+
+
+
+
+#toggle-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Style for the nav, hidden off-screen initially */
+#table-of-contents {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 200px;
+    height: 100%;
+    overflow-y: auto;
+    background: white;
+    transition: left 0.3s;
+}
+
+/* Shift nav and body content when checkbox is checked */
+#toggle-checkbox:checked ~ #table-of-contents {
+    left: 0;
+}
+
+#toggle-checkbox:checked ~ #content {
+    margin-left: 220px;
+}
+
+/* Style for main content */
+#content {
+    transition: margin-left 0.3s;
+}
+
 
