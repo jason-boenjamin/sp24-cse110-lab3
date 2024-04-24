@@ -1,5 +1,23 @@
 /* This file styles the ShellDivers meeting minutes page */
 
+/* Sets Root variable */
+:root{
+    --main-bg-color: #eaeaea;
+    --text-color: #333;
+    --accent-color: hsl(210, 50%,60%);
+    --fallback-color: #000;
+    --header-bg-color: rgb(193,122,31);
+    --link-hover-color: hsla(34, 100%, 50%, 0.8); 
+    --font-stack: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* reset defaul margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /*Sets the greyish color for the header, as well as centers and pads it*/
 header {
     background-color:rgb(193, 122, 31);
@@ -16,15 +34,7 @@ header {
     border-bottom: 5px solid var(--accent-color);
 }
 
-:root{
-    --main-bg-color: #eaeaea;
-    --text-color: #333;
-    --accent-color: hsl(210, 50%,60%);
-    --fallback-color: #000;
-    --header-bg-color: rgb(193,122,31);
-    --link-hover-color: hsla(34, 100%, 50%, 0.8); 
-    --font-stack: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+
 
 body{
     background-color: var(--main-bg-color, white); /* Default is white */;
@@ -81,4 +91,28 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+/* Applying a fallback color and variable for text color */
+h1, h2, h3 {
+    color: var(--text-color, var(--fallback-color)); /* Use fallback color if --text-color is not defined */
+}
+
+/* Background styles applied to nav */
+nav {
+    background-color: var(--main-bg-color); 
+}
+
+/* Example of using a color name instead of hex/rgb/hsl */
+p {
+    color: blue;
+}
+
+/* Applying various units of measurement */
+h1 {
+    font-size: 2rem; /* Relative unit */
+}
+
+img {
+    max-width: 400px; /* Absolute unit */
 }
